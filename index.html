@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameview</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Agrega el SDK de Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
+
+    <!-- Configura tu proyecto de Firebase -->
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCM3InNU2MZmltwxX4jEzoXtTtLyuDuLcc",
+            authDomain: "joshregistro.firebaseapp.com",
+            projectId: "joshregistro",
+            storageBucket: "joshregistro.appspot.com",
+            messagingSenderId: "29246656026",
+            appId: "1:29246656026:web:9290425cca296ac0114ba3",
+            measurementId: "G-769J3C94J4"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+    <link rel="icon" href="css/image/logo.jfif">
+    <meta name="viewport"
+        content="width=device-width, user-scalable-no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="header">
+            <a href="#" class="logo">Gameview<i class="bi bi-list"></i></a>
+            <div class="bi bi-menu" id="menu-icon"></div>
+
+            <nav class="navbar">
+                <a href="#home" class="active">Inicio</a>
+                <a href="#collection">Sala de juegos</a>
+                <a href="#eventos">Eventos</a>
+                <a href="#blogview">Blogview</a>
+
+
+            </nav>
+
+        </header>
+
+        <section class="home" id="home">
+
+            <div class="home-content">
+                <h1>La comunidad de videojuegos mas grande.</h1>
+                <div class="text-animate">
+                    <h3>Tenemos los mejores juegos para ti</h3>
+                </div>
+                <p>
+                    La comunidad de videojuegos más grande .
+                    Descubre las últimas noticias de videojuegos y comparte tus opiniones con una comunidad de
+                    jugadores
+                    apasionados. esto puedes poner como mensaje al inicio de la pagina creo
+                </p>
+
+                <div class="btn-box">
+                    <a id="btn-login" class="btn">Login</a>
+
+
+                </div>
+
+            </div>
+            <div id="fondo-difuminado"></div>
+
+
+
+
+
+
+
+            <div class="home-imghover"></div>
+
+            <div class="ventana__login" id="ventana__login">
+                <div class="contenedor__todo">
+                    <div class="caja__trasera">
+                        <div class="caja__trasera-login">
+                            <h3>¿Ya tienes una cuenta?</h3>
+                            <p>Inicia sesión para entrar en la página</p>
+                            <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                        </div>
+                        <div class="caja__trasera-register">
+                            <h3>¿Aún no tienes una cuenta?</h3>
+                            <p>Regístrate para que puedas iniciar sesión</p>
+                            <button id="btn__registrarse">Regístrarse</button>
+                        </div>
+                    </div>
+
+                    <!--Formulario de Login y registro-->
+                    <div class="contenedor__login-register">
+                        <!--Login-->
+                        <form action="" class="formulario__login">
+                            <h2>Iniciar Sesión</h2>
+                            <input type="text" placeholder="Correo Electronico">
+                            <input type="password" placeholder="Contraseña">
+                            <button>Entrar</button>
+                        </form>
+
+
+                        <!--Register-->
+                        <form action="" class="formulario__register">
+                            <h2>Regístrarse</h2>
+                            <input type="text" placeholder="Nombre completo">
+                            <input type="text" placeholder="Correo Electronico">
+
+                            <input type="password" placeholder="Contraseña">
+                            <button>Regístrarse</button>
+                        </form>
+                    </div>
+                </div>
+                <button id="cerrar-ventana">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path
+                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                    </svg>
+                </button>
+
+                <script src="index.js"></script>
+
+
+            </div>
+
+        </section>
+    </div>
+
+
+
+    <section class="collection_container" id="collection">
+
+
+        <div class="collection-image">
+            <a href="https://playvalorant.com/es-mx/?gad=1&gclid=EAIaIQobChMInZ71huXt_wIVLEJIAB28Vg5JEAAYASAAEgI0nPD_BwE&gclsrc=aw.ds"
+                target="_blank">
+                <img src="css/image/valorant.111.jfif" alt="collection" class="img-boton">
+            </a>
+            <div class="textojuegos">
+                <h4>VALORANT</h4>
+                <p>gratis <del>$100</del></p>
+            </div>
+
+        </div>
+
+        <div class="collection-image">
+            <a href="https://tediousness43.rssing.com/chan-20725183/article252.html" target="_blank">
+                <img src="css/image/dota222.jfif" alt="collection" class="img-boton">
+            </a>
+            <div class="textojuegos">
+                <h4>DOTA</h4>
+                <p>gratis <del>$100</del></p>
+            </div>
+
+        </div>
+        <div class="collection-image">
+            <a href="https://signup.leagueoflegends.com/es-es/signup/index?_gl=1*6himay*_ga*OTk2NjU2OTAyLjE2ODgyMjQzMDc.*_ga_FXBJE5DEDD*MTY4ODIyNDMwNi4xLjEuMTY4ODIyNDM0OC4xOC4wLjA.&_ga=2.92084953.2136081259.1688224307-996656902.1688224307"
+                target="_blank">
+                <img src="css/image/LoLjuego.jfif" alt="collection" class="img-boton">
+            </a>
+            <div class="textojuegos">
+                <h4>LEGUE OF LEGEND</h4>
+                <p>gratis <del>$100</del></p>
+            </div>
+
+        </div>
+        <div class="collection-image">
+            <a href="https://www.softnyx.com/member/join" target="_blank">
+                <img src="css/image/Rakion.jfif" alt="collection" class="img-boton">
+            </a>
+            <div class="textojuegos">
+                <h4>RAKION</h4>
+                <p>gratis <del>$100</del></p>
+            </div>
+
+        </div>
+        <div class="collection_card">
+            <h4>LOS JUEGOS MAS RANKEADOS</h4>
+            <p>aquí verás los juegos más rankeados hasta la fecha</p>
+
+
+        </div>
+        <div class="collecction_card">
+            <img src="css/image/imagen del lado.jfif" alt="collection">
+
+        </div>
+        <div class="collection_banner">
+            <div class="collection_banner_content">
+                PLAY, <br />EAT, SLEEP <br />AND <br />REPEAT
+
+            </div>
+
+        </div>
+        <div class="collection-image">
+            <img src="css/image/CSSS.jfif" alt="collection" class="img-boton">
+            <div class="textojuegos">
+                <h4>CONTER STRIKE CSGO</h4>
+                <p>gratis <del>$100</del></p>
+            </div>
+
+        </div>
+        <div class="collection-image">
+            <a href="https://www.fortnite.com/download" target="_blank">
+                <img src="css/image/FORNITE.jfif" alt="collection" class="img-boton">
+            </a>
+            <div class="textojuegos">
+                <h4>FORNITE</h4>
+                <p>gratis <del>$100</del></p>
+            </div>
+
+        </div>
+        <div class="collection-image">
+            <a href="https://www.gameloop.com/mx/game/action/call-of-duty-mobile-on-pc" target="_blank">
+                <img src="css/image/CALL.jfif" alt="collection" class="img-boton">
+            </a>
+            <div class="textojuegos">
+                <h4>CALL OF DUTY</h4>
+                <p>gratis <del>$100</del></p>
+            </div>
+
+        </div>
+        <div class="collection-image">
+            <a href="https://overwatch.blizzard.com/es-es/" target="_blank">
+                <img src="css/image/OVERWASH.jfif" alt="collection" class="img-boton">
+            </a>
+            <div class="textojuegos">
+                <h4>OVERWASH</h4>
+                <p>gratis <del>$100</del></p>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <section class="services" id="eventos">
+
+        <h2 class="animacion">Proximos <span>Eventos</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+
+                <img src="css/image/gifparaevento1.gif" class="gif" alt="collection">
+
+                <h3>Nuevo evento <br> Una buena caza</h3>
+                <p>Aprovecha sube rápido de nivel poniendo a prueba tus habilidades de caza en la Caza
+                    de accesorios. Con estos consejos, serás un maestro del sigilo. Y quién
+                    sabe, tal vez regrese antes de que termine el evento de la resistencia...
+                </p>
+                <a href="https://www.callofduty.com/es/wwii/landing/prop-hunt-guide" class="btm" target="_blank">Ver
+                    mas</a>
+
+            </div>
+
+            <div class="services-box">
+                <img src="css/image/gifdota.gif" class="gif" alt="collection">
+                <h3>¿Cuándo empieza el ti Dota 2 2023?</h3>
+                <p>
+                    El propio torneo de The International tendrá lugar del viernes 27 de octubre al domingo 29 de
+                    octubre.Valve reveló que el torneo se llevará a cabo en Seattle, en la ciudad norteamericana que ya
+                    acogió el The International en 2015
+                </p>
+                <a href="https://elcomercio.pe/tecnologia/videojuegos/the-international-12-el-mundial-de-dota-2-2023-se-llevara-a-cabo-en-octubre-en-seattle-noticia/#:~:text=The%20International%2012%3A%20el%20Mundial,Seattle%20%7C%20TECNOLOGIA%20%7C%20EL%20COMERCIO%20PER%C3%9A"
+                    class="btm" target="_blank">Ver mas</a>
+            </div>
+
+            <div class="services-box">
+                <img src="css/image/giflol.gif" class="gif" alt="collection">
+                <h3>¿Cuándo será el proximo evento de League of Legends?</h3>
+                <p>
+                    LoL Esports había anunciado con anterioridad un nuevo evento competitivo, Nuevos comienzos,
+                    que empezará el 10 de enero y servirá para celebrar el inicio de la temporada 2023.
+                </p>
+                <a href="https://support-leagueoflegends.riotgames.com/hc/es-419/articles/15916381521811-League-of-Legends-Tinta-Sombr%C3%ADa-MSI-2023"
+                    class="btm" target="_blank">Ver mas</a>
+
+            </div>
+
+        </div>
+
+
+
+
+    </section>
+
+    <section class="education" id="blogview">
+        <h2 class="animacion">My <span> blogview</span></h2>
+
+        <div class="education-row">
+            <div class="education-column">
+                <h3 class="title"> Los más Rankeados </h3>
+
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <a href="https://www.gamechampions.com/es/blog/fortnite-best-players/" target="_blank"
+                                class="texto">
+                                <div class="year"><i class='bx bx-checkbox'></i>2023</div>
+                                <h3>Los Mejores jugadores de FORNITE </h3>
+                                <p> Al igual que con cualquier otro deporte en el mundo, los fanáticos siempre quieren
+                                    saber
+                                    quién es la CABRA o el mejor jugador actual . Como espectadores y fanáticos, tenemos
+                                    sed
+                                    de ese conocimiento y nos involucramos en debates apasionados para descubrir estas
+                                    cosas.</p>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <a href="https://es.egamersworld.com/blog/top-15-best-valorant-players-at-the-start-of-2023-MCB_IhYi6"
+                                class="texto" target="_blank">
+                                <div class="year"><i class=""></i>2022-2023</div>
+                                <h3>Tour de Campeones VALORANT </h3>
+                                <p>São Paulo acaba de concluir, nos presenta algunos nombres nuevos, pero también deja
+                                    en
+                                    claro que los líderes anteriores todavía lo están haciendo bien. Durante el próximo
+                                    mes,
+                                    los equipos se estarán preparando para las ligas regionales, pero ya se pueden
+                                    identificar los favoritos</p>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <a href="https://es.egamersworld.com/blog/top-15-best-valorant-players-at-the-start-of-2023-MCB_IhYi6"
+                                class="texto" target="_blank">
+                                <div class="year"><i class=""></i>2017-2019</div>
+                                <h3>Campeones de overwash</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat eum quas repellendus
+                                    aspernatur et veniam dicta explicabo eius quia repudiandae, pariatur enim dolore
+                                    earum
+                                    possimus esse quasi obcaecati porro expedita.</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="education-column">
+                <h3 class="title">Los mejores juegos</h3>
+
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <a href="https://andina.pe/agencia/noticia-dota-2-juego-se-popularizo-cabinas-y-convirtio-a-lima-sede-torneo-major-926753.aspx"
+                                class="texto" target="_blank">
+                                <div class="year"><i class='bx bx-checkbox'></i>2017-2019</div>
+                                <h3>OVERWASH</h3>
+                                <p>Overwatch, el videojuego de disparos que salió a la venta en 2016, ha sido cerrado
+                                    oficialmente en las últimas horas.
+
+                                    Blizzard, su desarrolladora, ha querido dar de baja a los servidores del juego para
+                                    poder dar paso a su secuela, Overwatch 2, título que saldrá al mercado este 4 de
+                                    octubre.</p>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <a href="https://elcomercio.pe/tecnologia/e-sports/the-game-awards-2022-lol-dota-2-y-valorant-se-debaten-por-ser-el-mejor-esport-del-ano-rocket-league-csgo-videojuegos-ganadores-espana-mexico-usa-noticia/"
+                                class="texto" target="_blank">
+                                <div class="year"><i class=""></i>2017-2019</div>
+                                <h3>VALORANT</h3>
+                                <p> Valorant se lleva el premio al mejor eSport del año
+                                    El videojuego superó a contrincantes como Dota 2 y League of Legends, consagrándose
+                                    como
+                                    el mejor de 2022 en esta categoría y espera darnos nuevas novedades en este año 2023
+                                    y
+                                    las nuevas actualizaciondes del 2024</p>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <a href="https://support-leagueoflegends.riotgames.com/hc/es-419/articles/15916381521811-League-of-Legends-Tinta-Sombr%C3%ADa-MSI-2023"
+                                class="texto" target="_blank">
+                                <div class="year"><i class=""></i>2017-2019</div>
+                                <h3>DOTA</h3>
+                                <p>el juego que se popularizó en cabinas y convirtió a Lima en sede de torneo Major
+                                    La productora 4D Esports explica cómo avanza la organización del popular torneo que
+                                    tendrá medio millón en premios</p>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="botonvolver">
+            <a href="#home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+
+
+
+    </div>
+
+</body>
+
+</html>
